@@ -1,0 +1,21 @@
+{
+  "name": "movierama",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.common.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.6.0",
+    "webpack": "^4.40.2"
+  }
+}
