@@ -11,7 +11,7 @@ To get started with **MovieRama**, follow these steps:
 1. Clone the repository to your local machine:
 
 ```bash
-   git clone [<repository-url>https://github.com/jjtsou/MovieRama.git](https://github.com/jjtsou/MovieRama.git)
+   git clone [>https://github.com/jjtsou/MovieRama.git](https://github.com/jjtsou/MovieRama.git)
 ```
 
 2. Navigate to the project directory
