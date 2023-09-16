@@ -1,0 +1,44 @@
+/* No Results */
+.noResults {
+  display: flex;
+  margin-top: 5%;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  .text {
+    font-size: 28px;
+    color: #b8b8b8;
+  }
+}
+
+/* Loader */
+.loader {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; // Adjust to your needs for vertical centering
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #b8b8b8; // Adjust the color as needed
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+.showLoader {
+  display: flex;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

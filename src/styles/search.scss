@@ -1,0 +1,47 @@
+/* Search bar */
+.header {
+  display: flex;
+  align-items: center;
+
+  .title {
+    font-family: 'Indie Flower', cursive;
+    color: #b8b8b8;
+    font-size: 47px;
+  }
+
+  .search {
+    width: 35%;
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    padding-right: 13%;
+
+    .searchTerm {
+      width: 100%;
+      border: 3px solid #b8b8b8;
+      border-right: none;
+      padding: 5px;
+      height: 20px;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+      color: #b8b8b8;
+      font-size: 13px;
+
+      &:focus {
+        color: #b8b8b8;
+      }
+    }
+
+    .searchButton {
+      width: 39px;
+      height: 36px;
+      border: 3px solid #b8b8b8;
+      border-left: none;
+      text-align: center;
+      color: #fff;
+      border-radius: 0 5px 5px 0;
+      font-size: 20px;
+      outline: none;
+    }
+  }
+}

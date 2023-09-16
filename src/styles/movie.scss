@@ -1,0 +1,109 @@
+/* Movie */
+#movies {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2%;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 14%;
+  max-width: 14%;
+  margin: 1% 3%;
+  height: 580px;
+  background: #ffffff;
+  border-radius: 3px;
+  cursor: pointer;
+
+  .movieDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    padding: 2% 5%;
+  }
+
+  .moviePosterContainer .moviePoster {
+    width: 100%;
+    border-radius: 3px;
+  }
+
+  .movieDetails .movieHeader,
+  .movieDetails .movieFooter {
+    padding-bottom: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Movie Overview */
+  .movieDetails .movieOverview {
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Title */
+  .movieDetails .movieHeader .title {
+    font-size: 18px;
+  }
+
+  /* Date */
+  .movieDetails .movieHeader .dateWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .dateIcon {
+      width: 17px;
+      vertical-align: bottom;
+      margin-right: 5px;
+    }
+  }
+
+  /* Genre */
+  .movieDetails .movieFooter .genres {
+    flex: 0 0 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .genre {
+      display: inline-block;
+      padding: 0 10px;
+      font-size: 12px;
+      color: #b8b8b8;
+    }
+  }
+
+  /* Rating */
+  .movieDetails .movieFooter .ratingWrapper {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: flex-start;
+
+    .ratingIcon {
+      width: 18px;
+      margin-right: 5px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .movie {
+    flex: 0 0 20%;
+    max-width: 20%;
+    margin: 1% 2.5%;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .movie {
+    flex: 0 0 30%;
+    max-width: 30%;
+    margin: 1% 1.66%;
+  }
+}
