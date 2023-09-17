@@ -8,10 +8,9 @@ import { Genre, Movie } from '../types';
 export const getMovieGenres = (genreIds: number[]): { name: string }[] => {
   const storedGenres = sessionStorage.getItem('genres');
   const parsedGenres = storedGenres ? JSON.parse(storedGenres) : [];
-
   return genreIds.map(
     (genreId) =>
-      parsedGenres?.find?.((genre: Genre) => genreId === genre.id).name ?? '',
+      parsedGenres.find((genre: Genre) => genreId === genre.id)?.name ?? '',
   );
 };
 
