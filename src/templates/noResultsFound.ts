@@ -2,7 +2,7 @@
  * Creates the No Results Found template
  */
 export const noResultsFoundTemplate = () => {
-  const moviesList = document.getElementById('movies');
+  const moviesList = document.getElementById('movies') as HTMLDivElement;
   const noResults = document.createElement('span');
 
   noResults.classList.add('noResults');

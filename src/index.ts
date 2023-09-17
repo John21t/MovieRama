@@ -4,13 +4,19 @@ import { infiniteScroll, searchDelay } from './utils';
 window.addEventListener('load', getMovieGenres);
 infiniteScroll();
 
-const searchButton = document.getElementById('searchForMovies');
-searchButton.addEventListener('keyup', searchDelay);
+const searchInput = document.getElementById(
+  'searchForMovies',
+) as HTMLInputElement;
+searchInput.addEventListener('keyup', searchDelay);
 
 // Modal elements
-const modal = document.getElementById('movieDetailsModal');
-const modalContent = document.getElementById('movieModalContent');
-const modalClose = document.getElementById('movieModalClose');
+const modal = document.getElementById('movieDetailsModal') as HTMLDialogElement;
+const modalContent = document.getElementById(
+  'movieModalContent',
+) as HTMLDivElement;
+const modalClose = document.getElementById(
+  'movieModalClose',
+) as HTMLButtonElement;
 
 // Set Modals listeners
 modal.addEventListener('click', () => modal.classList.remove('showModal'));

@@ -5,15 +5,20 @@ import {
   getMovieTrailer,
 } from '../api/movie';
 import { modalContent } from '../templates/modalContent';
+import { MovieApiResponse } from '../types';
 
 /**
  * Gets all the required movie data we want to show to the user,
  * then calls createModalContent and appends the result
  * @param id
  */
-export const getMovie = (id) => {
-  const modal = document.getElementById('movieDetailsModal');
-  const selectedMovie = document.getElementById('selectedMovie');
+export const getMovie = (id: number) => {
+  const modal = document.getElementById(
+    'movieDetailsModal',
+  ) as HTMLDialogElement;
+  const selectedMovie = document.getElementById(
+    'selectedMovie',
+  ) as HTMLDivElement;
 
   return () => {
     Promise.all([
@@ -22,7 +27,7 @@ export const getMovie = (id) => {
       getMovieReviews(id),
       getSimilarMovies(id),
     ])
-      .then((data) => {
+      .then((data: MovieApiResponse) => {
         selectedMovie.innerHTML = modalContent(data);
         modal.classList.add('showModal');
       })

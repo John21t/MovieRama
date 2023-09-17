@@ -10,8 +10,8 @@ import {
 } from './endpoints';
 import { getNowPlayingMovies } from './getNowPlayingMovies';
 
-const getMoviesBySearch = (value) => {
-  const loader = document.getElementById('loader');
+const getMoviesBySearch = (value: string) => {
+  const loader = document.getElementById('loader') as HTMLDivElement;
   const reqQuery = buildQuery({
       api_key: apiKey,
       query: value,
@@ -42,11 +42,10 @@ const getMoviesBySearch = (value) => {
  * If search value is empty - calls getNowPlayingMovies function
  * @param value
  */
-export const searchForMovies = (value) => {
-  const moviesList = document.getElementById('movies');
-  const loader = document.getElementById('loader');
+export const searchForMovies = (value: string) => {
+  const moviesList = document.getElementById('movies') as HTMLDivElement;
+  const loader = document.getElementById('loader') as HTMLDivElement;
 
-  // Show loader
   loader.classList.add('showLoader');
 
   if (value) {

@@ -1,3 +1,4 @@
+import { Movie, SimilarMovie } from '../types';
 import { MDB_Endpoints, apiKey, baseUrl, buildQuery } from './endpoints';
 
 /**
@@ -5,7 +6,7 @@ import { MDB_Endpoints, apiKey, baseUrl, buildQuery } from './endpoints';
  * fetches the similar movies.
  * @param movieId
  */
-export const getSimilarMovies = (movieId) => {
+export const getSimilarMovies = (movieId: number) => {
   const reqQuery = buildQuery({ api_key: apiKey }),
     url = `${baseUrl}${MDB_Endpoints.similarMovies(movieId)}?${reqQuery}`;
 
@@ -18,7 +19,7 @@ export const getSimilarMovies = (movieId) => {
           title,
           poster_path: posterPath,
           backdrop_path: backdropPath,
-        }) => ({
+        }: Movie): SimilarMovie => ({
           id,
           title,
           posterPath,

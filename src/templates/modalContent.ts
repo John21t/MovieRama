@@ -1,12 +1,13 @@
 import { star, user } from '../assets';
+import { MovieApiResponse } from '../types';
 import { roundToOneDecimalPoint } from '../utils';
 
 /**
  * Creates the content of the modal
  * @param movieData
  */
-export const modalContent = (movieData) => {
-  const { title, overview, voteAvg, voteCount } = movieData[0];
+export const modalContent = (movieData: MovieApiResponse) => {
+  const { title, overview, voteAvg, voteCount } = movieData[0] ?? {};
 
   const trailerKey =
     movieData[1].length && movieData[1]?.[0].site === 'YouTube'
@@ -47,7 +48,7 @@ export const modalContent = (movieData) => {
                           <span class="ratingStar">
                               <img class="ratingIconStar" alt="ratingIcon" src=${star}>
                               <span class="rating"> ${roundToOneDecimalPoint(
-                                voteAvg,
+                                Number(voteAvg),
                               )} </span>
                           </span>
                           <span class="ratingCount">

@@ -1,4 +1,4 @@
-import { MDB_Endpoints, apiKey, baseUrl, buildQuery, pageToLoad } from '../api';
+import { MDB_Endpoints, apiKey, baseUrl, buildQuery, pageToLoad } from '.';
 import { moviesTemplate } from '../templates/movies';
 import { mapMovieData } from '../utils';
 

@@ -1,5 +1,6 @@
 import { calendar, star } from '../assets';
 import { roundToOneDecimalPoint } from '../utils';
+import { MappedMovie } from '../types';
 
 /**
  * Creates the movie template
@@ -13,7 +14,7 @@ export const movieTemplate = ({
   posterPath,
   backdropPath,
   voteAvg,
-} = {}) => {
+}: MappedMovie) => {
   const url = 'https://image.tmdb.org/t/p/w300/';
   const imageUrl = posterPath ? `${url}${posterPath}` : `${url}${backdropPath}`;
   const yearOfRelease = new Date(releaseDate).getFullYear();

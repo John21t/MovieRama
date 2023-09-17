@@ -1,7 +1,11 @@
 import { getNowPlayingMovies, searchForMovies } from '../api';
 
-const searchButton = document.getElementById('searchForMovies');
-const scrollTriggerElement = document.getElementById('scrollTriggerElement');
+const searchInput = document.getElementById(
+  'searchForMovies',
+) as HTMLInputElement;
+const scrollTriggerElement = document.getElementById(
+  'scrollTriggerElement',
+) as HTMLDivElement;
 
 export const infiniteScroll = () => {
   const options = {
@@ -15,8 +19,8 @@ export const infiniteScroll = () => {
       const hasData = !document.getElementById('noResultsFound');
       if (entry.isIntersecting && hasData) {
         // The target element is now visible, so load more content
-        if (searchButton.value) {
-          searchForMovies(searchButton.value);
+        if (searchInput.value) {
+          searchForMovies(searchInput.value);
         } else {
           getNowPlayingMovies();
         }
