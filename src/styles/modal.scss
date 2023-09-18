@@ -3,13 +3,13 @@
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+  padding-top: 6.25rem;
   left: 0;
   top: 0;
+  margin-bottom: 10rem;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -19,11 +19,11 @@
   background-color: #fefefe;
   margin: auto;
   padding: 0;
-  border: 1px solid #888;
-  width: 40%;
+  border-radius: 0.6em;
+  width: 44rem;
   box-shadow:
-    0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2),
+    0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
   animation-name: animatetop;
   animation-duration: 0.4s;
 }
@@ -31,7 +31,7 @@
 /* Add Animation */
 @keyframes animatetop {
   from {
-    top: -300px;
+    top: -18.75rem; /* Use rem or em for animation values */
     opacity: 0;
   }
   to {
@@ -44,9 +44,9 @@
 .close {
   color: #b8b8b8;
   float: right;
-  font-size: 28px;
+  font-size: 1.75rem; /* Use rem or em for font-size */
   font-weight: bold;
-  padding-right: 5px;
+  padding-right: 0.3125rem; /* Use rem or em for padding */
   &:hover,
   &:focus {
     text-decoration: none;
@@ -64,6 +64,8 @@
 
 .modalContentContainer {
   background-color: #e8e8e8;
+  margin-bottom: 6.25rem;
+  border-radius: 0.6em;
 }
 
 /* Modal Content Header */
@@ -75,22 +77,22 @@
       width: 95%;
       align-items: center;
       .title {
-        font-size: 30px;
-        padding: 10px 0 5px 25px;
+        font-size: 1.875rem;
+        padding: 0.6rem 0 0.3rem 1.5rem;
       }
       .ratingWrapper {
         .ratingStar {
-          margin-right: 5px;
+          margin-right: 0.3rem;
         }
         .ratingIconStar {
-          width: 18px;
+          width: 1.1rem;
         }
         .ratingIconCount {
-          width: 14px;
+          width: 0.875rem;
           vertical-align: text-top;
         }
         .ratingCount {
-          padding-left: 1px;
+          padding-left: 0.0625rem;
         }
       }
     }
@@ -105,7 +107,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin: 20px 0;
+      margin: 1.25rem 0;
       .movieOverview {
         display: flex;
         flex-direction: column;
@@ -113,15 +115,15 @@
         align-items: center;
         background: whitesmoke;
         width: 90%;
-        border-radius: 13px;
-        margin-top: 15px;
+        border-radius: 0.8rem;
+        margin-top: 0.9rem;
         .title {
           color: #b8b8b8;
-          padding: 10px 0;
+          padding: 0.6rem 0;
         }
         .text {
-          font-size: 14px;
-          margin: 0 40px 20px 40px;
+          font-size: 0.875rem;
+          margin: 0 2.5rem 1.25rem 2.5rem;
         }
       }
     }
@@ -130,6 +132,7 @@
 
 /* Modal Content Footer */
 .modalContentContainer {
+  margin-bottom: 10rem;
   .movieDetails {
     .movieFooter {
       .reviewsWrapper {
@@ -138,32 +141,32 @@
         width: 90%;
         margin: 0 auto;
         background: whitesmoke;
-        border-radius: 13px;
-        padding-bottom: 17px;
+        border-radius: 0.8rem;
+        padding-bottom: 1rem;
         .title {
           text-align: center;
-          padding-top: 10px;
+          padding-top: 0.625rem;
           color: #b8b8b8;
         }
         .reviews {
-          padding: 10px;
+          padding: 0.625rem;
           width: 90%;
           margin: 0 auto;
           .review {
             display: flex;
             flex-direction: column;
-            padding-top: 20px;
+            padding-top: 1.25rem;
             .expandReview {
               height: 100%;
             }
             .author {
-              font-size: 14px;
-              padding-bottom: 2px;
+              font-size: 0.875rem;
+              padding-bottom: 0.125rem;
               font-style: italic;
             }
             .content {
-              padding: 5px 13px 0 13px;
-              font-size: 13px;
+              padding: 0.3rem 0.8rem 0 0.8rem;
+              font-size: 0.8rem;
               display: -webkit-box;
               -webkit-line-clamp: 10;
               -webkit-box-orient: vertical;
@@ -176,11 +179,11 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 14px 0 12%;
+        margin: 0.875rem 0 6%;
         align-items: center;
         overflow: scroll;
         .title {
-          padding-bottom: 8px;
+          padding-bottom: 0.5rem;
         }
         .similarMovies {
           display: flex;
@@ -189,19 +192,19 @@
           .similarMovie {
             display: flex;
             flex-direction: column;
-            padding: 10px 5px;
-            margin: 10px 5px;
+            padding: 0.625rem 0.3rem;
+            margin: 0.625rem 0.3rem;
             height: 100%;
             background: whitesmoke;
-            border-radius: 14px;
+            border-radius: 0.875rem;
             .moviePoster {
-              height: 225px;
-              width: 150px;
+              height: 14rem;
+              width: 9rem;
             }
             .content {
               text-align: center;
-              padding-top: 5px;
-              font-size: 14px;
+              padding-top: 0.4rem;
+              font-size: 0.875rem;
               color: #b8b8b8;
             }
           }

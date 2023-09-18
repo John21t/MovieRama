@@ -1,109 +1,114 @@
-/* Movie */
+/* Variables */
+$movieWidth: 12%;
+$movieMargin: 1%;
+$fontSizeBase: 16px;
+
+/* Movie Grid */
 #movies {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(#{$movieWidth}, 1fr));
+  gap: 3rem;
   padding: 2%;
-}
 
-.movie {
-  display: flex;
-  flex-direction: column;
-  flex: 0 0 14%;
-  max-width: 14%;
-  margin: 1% 3%;
-  height: 580px;
-  background: #ffffff;
-  border-radius: 3px;
-  cursor: pointer;
-
-  .movieDetails {
+  .movie {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
-    padding: 2% 5%;
-  }
+    background: #ffffff;
+    border-radius: 0.6em;
+    cursor: pointer;
 
-  .moviePosterContainer .moviePoster {
-    width: 100%;
-    border-radius: 3px;
-  }
+    .movieDetails {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 1.2rem 2.4rem 0.5rem;
+      gap: 1.2em;
+      height: 100%;
+      /* Movie Header */
+      .movieHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-  .movieDetails .movieHeader,
-  .movieDetails .movieFooter {
-    padding-bottom: 3%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+        /* Title */
+        .title {
+          font-size: 1rem;
+        }
 
-  /* Movie Overview */
-  .movieDetails .movieOverview {
-    font-size: 14px;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
+        /* Date */
+        .dateWrapper {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          color: #b8b8b8;
 
-  /* Title */
-  .movieDetails .movieHeader .title {
-    font-size: 18px;
-  }
+          .dateIcon {
+            width: 1rem;
+            vertical-align: bottom;
+            margin-right: 0.3rem;
+          }
+        }
+      }
 
-  /* Date */
-  .movieDetails .movieHeader .dateWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+      /* Movie Overview */
+      .movieOverview {
+        font-size: 0.9em;
+        max-height: 8em;
+        line-height: 1.35em;
+        overflow: hidden;
+        color: #b8b8b8;
+      }
 
-    .dateIcon {
-      width: 17px;
-      vertical-align: bottom;
-      margin-right: 5px;
+      /* Movie Footer */
+      .movieFooter {
+        display: flex;
+        align-items: center;
+
+        /* Genres */
+        .genres {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          .genre {
+            display: inline-block;
+            padding: 0 0.6em;
+            font-size: 0.7rem;
+            color: #b8b8b8;
+          }
+        }
+
+        /* Rating */
+        .ratingWrapper {
+          display: flex;
+          align-items: flex-start;
+
+          .ratingIcon {
+            width: 1rem;
+            margin-right: 0.3rem;
+          }
+        }
+      }
     }
-  }
 
-  /* Genre */
-  .movieDetails .movieFooter .genres {
-    flex: 0 0 60%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    .genre {
-      display: inline-block;
-      padding: 0 10px;
-      font-size: 12px;
-      color: #b8b8b8;
-    }
-  }
-
-  /* Rating */
-  .movieDetails .movieFooter .ratingWrapper {
-    flex: 0 0 40%;
-    display: flex;
-    align-items: flex-start;
-
-    .ratingIcon {
-      width: 18px;
-      margin-right: 5px;
+    /* Movie Poster */
+    .moviePosterContainer .moviePoster {
+      width: 100%;
+      border-top-left-radius: 0.6em;
+      border-top-right-radius: 0.6em;
     }
   }
 }
 
-@media only screen and (max-width: 1500px) {
-  .movie {
-    flex: 0 0 20%;
-    max-width: 20%;
-    margin: 1% 2.5%;
+/* Media Queries */
+@media only screen and (max-width: 1600px) {
+  #movies {
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
   }
 }
 
 @media only screen and (max-width: 1050px) {
-  .movie {
-    flex: 0 0 30%;
-    max-width: 30%;
-    margin: 1% 1.66%;
+  #movies {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
   }
 }

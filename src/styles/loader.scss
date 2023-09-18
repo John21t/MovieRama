@@ -8,7 +8,7 @@
   align-items: center;
 
   .text {
-    font-size: 28px;
+    font-size: 1.75rem;
     color: #b8b8b8;
   }
 }
@@ -18,15 +18,15 @@
   display: none;
   justify-content: center;
   align-items: center;
-  height: 100vh; // Adjust to your needs for vertical centering
+  height: 100vh;
 }
 
 .spinner {
-  border: 4px solid rgba(255, 255, 255, 0.3);
+  border: 0.25rem solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  border-top: 4px solid #b8b8b8; // Adjust the color as needed
-  width: 40px;
-  height: 40px;
+  border-top: 0.25rem solid #b8b8b8;
+  width: 2.5rem;
+  height: 2.5rem;
   animation: spin 1s linear infinite;
 }
 

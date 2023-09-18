@@ -6,7 +6,7 @@
   .title {
     font-family: 'Indie Flower', cursive;
     color: #b8b8b8;
-    font-size: 47px;
+    font-size: 3rem;
   }
 
   .search {
@@ -18,14 +18,14 @@
 
     .searchTerm {
       width: 100%;
-      border: 3px solid #b8b8b8;
+      border: 0.2rem solid #b8b8b8;
       border-right: none;
-      padding: 5px;
-      height: 20px;
-      border-radius: 5px 0 0 5px;
+      padding: 0.3rem;
+      height: 1.25rem;
+      border-radius: 0.3rem 0 0 0.3rem;
       outline: none;
       color: #b8b8b8;
-      font-size: 13px;
+      font-size: 0.813rem;
 
       &:focus {
         color: #b8b8b8;
@@ -33,14 +33,14 @@
     }
 
     .searchButton {
-      width: 39px;
-      height: 36px;
-      border: 3px solid #b8b8b8;
+      width: 2.4rem;
+      height: 2.25rem;
+      border: 0.2rem solid #b8b8b8;
       border-left: none;
       text-align: center;
       color: #fff;
-      border-radius: 0 5px 5px 0;
-      font-size: 20px;
+      border-radius: 0 0.3rem 0.3rem 0;
+      font-size: 1.25rem;
       outline: none;
     }
   }
